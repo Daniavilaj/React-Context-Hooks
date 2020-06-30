@@ -2,6 +2,7 @@ import React, { Component, createContext } from 'react';
 
 export const AuthContext = createContext();
 
+// Context Provider with class component
 class AuthContextProvider extends Component {
     state = { 
         isAuthenticated: false
