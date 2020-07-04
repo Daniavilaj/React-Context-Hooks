@@ -3,7 +3,6 @@ import { ThemeContext } from '../contexts/ThemeContext';
 import { AuthContext } from '../contexts/AuthContext';
 
 // Multiple Context in a class component 
-
 // class Navbar extends Component {
 //     //2. Context Consumer
 //     render() {
@@ -34,7 +33,6 @@ import { AuthContext } from '../contexts/AuthContext';
 // }
 
 // Multiple Context in a functional component 
-
 const Navbar = () => {
   const { isAuthenticated, toggleAuth } = useContext(AuthContext);
   const { isLightTheme, light, dark } = useContext(ThemeContext);

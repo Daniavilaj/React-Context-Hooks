@@ -3,7 +3,6 @@ import { ThemeContext } from '../contexts/ThemeContext';
 import { BookContext } from '../contexts/BookContext';
 
 // Context in class component
-
 // class BookList extends Component {
 //     // 1. Context Type
 //     static contextType = ThemeContext;
