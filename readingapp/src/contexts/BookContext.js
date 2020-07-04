@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useReducer, useEffect } from 'react';
 import { bookReducer } from '../reducers/bookreducer';
 
 export const BookContext = createContext();
@@ -19,7 +19,14 @@ const BookContextProvider = (props) => {
     // };
 
     // After with Reducer
-    const [ books, dispatch ] = useReducer(bookReducer, []);
+    const [ books, dispatch ] = useReducer(bookReducer, [], () => {
+        const localData = localStorage.getItem('books');
+        return localData ? JSON.parse(localData) : [];
+    });
+
+    useEffect(() => {
+        localStorage.setItem('books', JSON.stringify(books))
+    }, [ books ]);
 
     return (
         // Before
